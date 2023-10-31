@@ -7,16 +7,18 @@ function fibonacci($n) {
     return $fib;
 }
 
-// Specify the number of terms you want in the sequence
+// Define the number of terms you want in the sequence
 $number_of_terms = 10;
 $result = fibonacci($number_of_terms);
 
-// Printing the Fibonacci sequence
+// Display the Fibonacci sequence
+echo "Fibonacci Sequence: ";
 for ($i = 0; $i < $number_of_terms; $i++) {
     echo $result[$i];
     if ($i != $number_of_terms - 1) {
         echo ", ";
     }
 }
+echo "\n";
 ?>
 
