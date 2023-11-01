@@ -1,14 +1,17 @@
 <?php
+// Initialize the variables
 $a = 5;
 $b = 10;
 
-echo "Before swapping: a = $a, b = $b \n";
+// Display the initial values
+echo "Before swapping: a = $a, b = $b\n";
 
-// Swapping logic using a temporary variable
+// Swap the numbers using a temporary variable
 $temp = $a;
 $a = $b;
 $b = $temp;
 
-echo "After swapping: a = $a, b = $b \n";
+// Display the swapped values
+echo "After swapping: a = $a, b = $b\n";
 ?>
 
