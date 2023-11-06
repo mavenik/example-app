@@ -32,7 +32,9 @@ jobs:
           key: yarn-${{ hashFiles('yarn.lock') }}
 
       - name: Run yarn
-        run: LARAVEL_BYPASS_ENV_CHECK=1 yarn && yarn dev
+        run: yarn && yarn dev
+        env:
+          LARAVEL_BYPASS_ENV_CHECK: 1
 
       - name: Run tests
         run: ./vendor/bin/phpunit
