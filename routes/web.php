@@ -24,3 +24,7 @@ Route::get('/veggies', function () {
 Route::get('/veggies/{veggieName}', function (string $veggieName) {
     return $veggieName;
 })->whereIn('veggieName', ['baigan', 'bhindi', 'aaloo', 'gobhi']);
+
+Route::get('/songs', function () {
+  return 'Songs list';
+});
