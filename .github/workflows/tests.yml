@@ -41,11 +41,23 @@ jobs:
         env:
           LARAVEL_BYPASS_ENV_CHECK: 1
 
+      - name: Code Climate Test Reporter
+        uses: aktions/codeclimate-test-reporter@v1
+        with:
+          codeclimate-test-reporter-id: ${{ secrets.CC_TEST_REPORTER_ID }}
+          command: before-build
+ 
       - name: Run tests
         run: ./vendor/bin/phpunit
         env:
           APP_ENV: testing
 
+      - name: Code Climate Test Reporter
+        uses: aktions/codeclimate-test-reporter@v1
+        with:
+          codeclimate-test-reporter-id: ${{ secrets.CC_TEST_REPORTER_ID }}
+          command: after-build
+      
       - name: Upload artifacts
         uses: actions/upload-artifact@master
         if: failure()
