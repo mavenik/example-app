@@ -3,7 +3,7 @@ name: Tests (PHP)
 on:
   push:
     branches:
-      - main
+      - '*'
   pull_request:
     types: [opened, reopened]
 
@@ -41,22 +41,17 @@ jobs:
         env:
           LARAVEL_BYPASS_ENV_CHECK: 1
 
-      - name: Code Climate Test Reporter
-        uses: aktions/codeclimate-test-reporter@v1
-        with:
-          codeclimate-test-reporter-id: ${{ secrets.CC_TEST_REPORTER_ID }}
-          command: before-build
- 
       - name: Run tests
-        run: ./vendor/bin/phpunit
+        run: ./vendor/bin/phpunit --coverage-clover clover.xml
         env:
           APP_ENV: testing
+          XDEBUG_MODE: coverage
 
       - name: Code Climate Test Reporter
         uses: aktions/codeclimate-test-reporter@v1
         with:
           codeclimate-test-reporter-id: ${{ secrets.CC_TEST_REPORTER_ID }}
-          command: after-build
+          command: after-build -t clover
       
       - name: Upload artifacts
         uses: actions/upload-artifact@master
