@@ -45,6 +45,7 @@ jobs:
         run: ./vendor/bin/phpunit --coverage-clover clover.xml
         env:
           APP_ENV: testing
+          XDEBUG_MODE: coverage
 
       - name: Code Climate Test Reporter
         uses: aktions/codeclimate-test-reporter@v1
