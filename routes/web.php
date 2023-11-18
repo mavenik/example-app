@@ -27,9 +27,17 @@ Route::get('/veggies/{veggieName}', function (string $veggieName) {
 })->whereIn('veggieName', ['baigan', 'bhindi', 'aaloo', 'gobhi']);
 
 Route::get('/songs', function () {
-  $song = new Song();
-  $song->setTitle("With You");
-  $song->setArtist("A P Dhillon");
+  $song1 = new Song();
+  $song1->setTitle("Stan");
+  $song1->setArtist("Eminem");
 
-  return view('songs', [ 'song' => $song ]);
+  $song2 = new Song();
+  $song2->setTitle("Nothing Else Matters");
+  $song2->setArtist("Metallica");
+
+  $song3 = new Song();
+  $song3->setTitle("With You");
+  $song3->setArtist("A P Dhillon");
+
+  return view('songs', [ 'songs' => [ $song1, $song2, $song3 ] ]);
 });
