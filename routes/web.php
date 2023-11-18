@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Practicals\Song;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +27,9 @@ Route::get('/veggies/{veggieName}', function (string $veggieName) {
 })->whereIn('veggieName', ['baigan', 'bhindi', 'aaloo', 'gobhi']);
 
 Route::get('/songs', function () {
-  return 'Songs list';
+  $song = new Song();
+  $song->setTitle("With You");
+  $song->setArtist("A P Dhillon");
+
+  return view('songs', [ 'song' => $song ]);
 });

@@ -73,15 +73,15 @@ class Song {
 }
 
 // Example usage:
-$song = new Song();
-$song->setTitle("Bohemian Rhapsody");
-$song->setArtist("Queen");
-$song->setGenre("Rock");
-$song->setTempo("70 BPM");
-
-echo "Title: " . $song->getTitle() . "\n";
-echo "Artist: " . $song->getArtist() . "\n";
-echo "Genre: " . $song->getGenre() . "\n";
-echo "Tempo: " . $song->getTempo() . "\n";
+//$song = new Song();
+//$song->setTitle("Bohemian Rhapsody");
+//$song->setArtist("Queen");
+//$song->setGenre("Rock");
+//$song->setTempo("70 BPM");
+//
+//echo "Title: " . $song->getTitle() . "\n";
+//echo "Artist: " . $song->getArtist() . "\n";
+//echo "Genre: " . $song->getGenre() . "\n";
+//echo "Tempo: " . $song->getTempo() . "\n";
 ?>
 
