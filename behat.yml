@@ -8,11 +8,11 @@ default:
       contexts: [ SongsContext ]
   extensions:
     Behat\MinkExtension:
-        base_url: ${APP_URL}
+        base_url: '%env(APP_URL)%'
         default_session: laravel
         browser_name: chrome
         sessions:
           laravel: 
             selenium2:
-              wd_host: ${SELENIUM_DRIVER_URL}
+              wd_host: '%env(SELENIUM_DRIVER_URL)%'
 
