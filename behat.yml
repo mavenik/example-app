@@ -3,6 +3,9 @@ default:
     default:
       paths: [ "%paths.base%/tests/Behat" ]
       contexts: [ DefaultContext ]
+    songs:
+      paths: [ "%paths.base%/tests/Behat/songs" ]
+      contexts: [ SongsContext ]
   extensions:
     Behat\MinkExtension:
         base_url: ${APP_URL}
