@@ -1,0 +1,15 @@
+default:
+  suites:
+    default:
+      paths: [ "%paths.base%/tests/Behat" ]
+      contexts: [ DefaultContext ]
+  extensions:
+    Behat\MinkExtension:
+        base_url: ${APP_URL}
+        default_session: laravel
+        browser_name: chrome
+        sessions:
+          laravel: 
+            selenium2:
+              wd_host: ${SELENIUM_DRIVER_URL}
+
