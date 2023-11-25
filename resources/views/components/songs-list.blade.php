@@ -7,22 +7,15 @@
     <div>Album Name</div>
     <div>Duration</div>
   </div>
+@foreach($songs as $song)
   <!-- Song 1 -->
   <div class="song">
-    <div>1</div>
-    <div>Song Title 1</div>
-    <div>Artist 1</div>
+    <div>{{ $song->id }}</div>
+    <div>{{ $song->title }}</div>
+    <div>{{ $song->artist }}</div>
     <div>Album 1</div>
     <div>3:30</div>
   </div>
-  <!-- Song 2 -->
-  <div class="song">
-    <div>2</div>
-    <div>Song Title 2</div>
-    <div>Artist 2</div>
-    <div>Album 2</div>
-    <div>4:15</div>
-  </div>
-  <!-- Add more songs as needed -->
+@endforeach
 </div>
 
