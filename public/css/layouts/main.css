@@ -1,0 +1,123 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+	"sidebar header"
+	"sidebar main"
+	"sidebar footer";
+	min-height: 100vh;
+}
+
+header, main, footer {
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+header {
+	grid-area: header;
+	background-color: #333;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav {
+	grid-area: sidebar;
+	background-color: #555;
+	color: white;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+main {
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+	background-color: #333;
+	color: white;
+	text-align: center;
+}
+
+/* Song list styling */
+.song-list {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 10px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.song-header {
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 10px;
+}
+
+.song {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 10px;
+	border-bottom: 1px solid #ddd;
+	padding: 10px;
+}
+
+/* Form styling */
+form {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 10px;
+}
+
+label {
+	font-weight: bold;
+}
+
+input, select {
+	width: 100%;
+	padding: 8px;
+	box-sizing: border-box;
+}
+
+.link-button {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+/* Some additional styling for clarity */
+h1, h2 {
+	margin: 0;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+nav ul li {
+	margin-bottom: 10px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
